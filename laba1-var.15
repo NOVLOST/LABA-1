@@ -36,6 +36,7 @@ with open('hello.txt', 'r') as file:
                 # (любой иной символ  служит как триггер, что пора вывести число на экран)
     
                 if y >= '0' and y <='9':
+
                     arry.append(y)
     
                 else:
@@ -47,6 +48,7 @@ with open('hello.txt', 'r') as file:
                         arry = ''.join(arry)
                         num = int(num)
                         if num==0 and num<k_num:
+                            arry = list(arry)
                             print('число не соответсвует требованию задания \n -----------')
                             continue
                         if num % 2==0 and len(arry)>k_num  and len(arry)%2!=0: #проверяем четность,длинну,и нечетность длинны
