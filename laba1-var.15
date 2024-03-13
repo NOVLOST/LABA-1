@@ -44,15 +44,17 @@ with open('hello.txt', 'r') as file:
                     else:
     
                         num=''.join(arry)#делаем из символов списка arry, строку num, затем в целое число
+                        arry = ''.join(arry)
                         num = int(num)
                         if num==0 and num<k_num:
                             print('число не соответсвует требованию задания \n -----------')
                             continue
                         if num % 2==0 and len(arry)>k_num  and len(arry)%2!=0: #проверяем четность,длинну,и нечетность длинны
-                            print(num)
+                            print(arry)
                             for i in arry:#после вывода число выводим прописью использованные цифры
     
                                     print(dir[i])
+                            arry = list(arry)
                             arry.clear()
                             num=0
                             print('-----------')
@@ -60,5 +62,6 @@ with open('hello.txt', 'r') as file:
                             continue
                         else:     #числа не подхадящие под условие заменяем на сообщение
                             print('число не соответсвует требованию задания \n -----------')
+                            arry=list(arry)
                             arry.clear()  # очищаем список и продолжаем цикл до конца
                             num = 0
